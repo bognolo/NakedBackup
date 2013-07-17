@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="NakedBackup">
+	<target name="build">
+		<jar destfile="naked-backup.jar">
+			<manifest>
+				<attribute name="Main-Class" value="NakedBackup" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="build" />
+			<fileset dir="src" />
+			<fileset dir="." includes="*.xml" />
+		</jar>
+	</target>
+</project>
